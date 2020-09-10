@@ -3,34 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>ProjectGusMV</title>
+    <title>Unity WebGL Player | ProjectGusMV</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-		var gameInstance = UnityLoader.instantiate("unityContainer", "Build/ProjectGusMV.json");
-
-		function onResize() {
-			var canvas = gameInstance.Module.canvas;
-			var container = gameInstance.container;
-			var w;
-			var h;
-
-			w = window.innerWidth;
-			h = window.innerHeight;
-
-			var r = 736 / 414;
-
-			if (w * r > window.innerHeight) {
-				w = Math.min(w, Math.ceil(h / r));
-			}
-			h = Math.floor(w * r);
-
-			container.style.width = canvas.style.width = w + "px";
-			container.style.height = canvas.style.height = h + "px";
-			//container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
-			//container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
-		}
-		window.addEventListener('resize', onResize);
-	</script>
+      UnityLoader.instantiate("unityContainer", "Build/ProjectGusMV.json");
+    </script>
   </head>
   <body>
     <div id="unityContainer" style="width: 414px; height: 736px; margin: auto"></div>
